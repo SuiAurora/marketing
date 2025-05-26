@@ -18,5 +18,5 @@ import java.util.List;
 public interface IContentMapper extends BaseMapper<ContentPO> {
 
     IPage<ContentPageRespDTO> page(@Param("page") Page<ContentPO> page,
-                                   @Param("categoryIdList") List<Integer> categoryIdList);
+                                   @Param("categoryIdList") List<String> categoryIdList);
 }

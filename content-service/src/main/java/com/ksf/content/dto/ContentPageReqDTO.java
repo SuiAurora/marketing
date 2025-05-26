@@ -14,5 +14,5 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class ContentPageReqDTO extends Page<ContentPO> {
-    private List<Integer> categoryIdList;
+    private List<String> categoryIdList;
 }
