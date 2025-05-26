@@ -1,0 +1,39 @@
+marketing:
+  jwt:
+    access:
+      encryption-key: "k7s5KvL2X8z1tRwQ9gYfJhNp3mB6TZx0cVb4DlCeAoa="
+      expire: 3600
+    refresh:
+      encryption-key: "x2S8rP5TbWwZqYg7VkLp9aFmNcRj4D1uBhQ3eX6tOv0a="
+      expire: 604800
+
+server:
+  port: 8001
+
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 106.54.198.101:8848
+  datasource:
+    url: jdbc:mysql://192.168.60.204:3306/ksf?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: ksf
+    password: ksf12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      pool-name: provider-service-pool
+      maximum-pool-size: 20
+      minimum-idle: 10
+      idle-timeout: 600000
+      max-lifetime: 1800000
+#  data:
+#    redis:
+#      host: 192.168.60.204
+#      port: 6379
+#      password: ksf12345
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
